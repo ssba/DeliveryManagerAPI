@@ -19,7 +19,7 @@ class CreateCarsTable extends Migration
             $table->uuid('guid')->unique();
             $table->string('car');
             $table->double('width', 15, 8)->comment('ft');
-            $table->double('heigth', 15, 8)->comment('ft');
+            $table->double('height', 15, 8)->comment('ft');
             $table->double('length', 15, 8)->comment('ft');
             $table->double('capacity', 15, 8)->comment('lb');
             $table->double('volume', 15, 8)->comment('ft3');

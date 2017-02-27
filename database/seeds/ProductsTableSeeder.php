@@ -37,7 +37,7 @@ class ProductsTableSeeder extends Seeder
                 'sku' => $faker->ean8,
                 'name' => $faker->word,
                 'width' => mt_rand (10, 50) / 10,
-                'heigth' => mt_rand (10, 50) / 10,
+                'height' => mt_rand (10, 50) / 10,
                 'length' => mt_rand (10, 50) / 10,
                 'volume' => mt_rand (50, 100) / 10,
                 'image' => null,

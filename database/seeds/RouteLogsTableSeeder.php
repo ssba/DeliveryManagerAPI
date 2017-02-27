@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class DeliveryLogsTableSeeder extends Seeder
+class RouteLogsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

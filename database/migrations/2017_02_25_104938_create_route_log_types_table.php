@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDeliveryLogTypesTable extends Migration
+class CreateRouteLogTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateDeliveryLogTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('delivery_log_types', function (Blueprint $table) {
+        Schema::create('route_log_types', function (Blueprint $table) {
 
             $table->engine = 'InnoDB';
-            $table->increments('id');
+            $table->uuid('guid');
             $table->string('type')->unique();
             $table->text('desc');
             $table->timestamps();

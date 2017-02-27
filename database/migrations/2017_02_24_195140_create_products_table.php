@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->string('sku');
             $table->string('name');
             $table->double('width', 15, 8)->comment('ft');
-            $table->double('heigth', 15, 8)->comment('ft');
+            $table->double('height', 15, 8)->comment('ft');
             $table->double('length', 15, 8)->comment('ft');
             $table->double('volume', 15, 8)->comment('ft3');
             $table->string('image')->nullable();

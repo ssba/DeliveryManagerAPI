@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Faker\Factory as Faker;
 
-class DeliveryLogTypesTableSeeder extends Seeder
+class RouteLogTypesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,63 +12,71 @@ class DeliveryLogTypesTableSeeder extends Seeder
      */
     public function run()
     {
+        $faker = Faker::create();
 
-        DB::table('delivery_log_types')->insert([
+        DB::table('route_log_types')->insert([
+            'guid' => $faker->uuid(),
             'type' => 'InfoReceived',
             'desc' => '',
             'created_at' => date("Y-m-d H:i:s"),
             'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
-        DB::table('delivery_log_types')->insert([
+        DB::table('route_log_types')->insert([
+            'guid' => $faker->uuid(),
             'type' => 'InTransit',
             'desc' => '',
             'created_at' => date("Y-m-d H:i:s"),
             'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
-        DB::table('delivery_log_types')->insert([
+        DB::table('route_log_types')->insert([
+            'guid' => $faker->uuid(),
             'type' => 'OutForDelivery',
             'desc' => '',
             'created_at' => date("Y-m-d H:i:s"),
             'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
-        DB::table('delivery_log_types')->insert([
+        DB::table('route_log_types')->insert([
+            'guid' => $faker->uuid(),
             'type' => 'FailedAttempt',
             'desc' => '',
             'created_at' => date("Y-m-d H:i:s"),
             'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
-        DB::table('delivery_log_types')->insert([
+        DB::table('route_log_types')->insert([
+            'guid' => $faker->uuid(),
             'type' => 'Delivered',
             'desc' => '',
             'created_at' => date("Y-m-d H:i:s"),
             'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
-        DB::table('delivery_log_types')->insert([
+        DB::table('route_log_types')->insert([
+            'guid' => $faker->uuid(),
             'type' => 'Exception',
             'desc' => '',
             'created_at' => date("Y-m-d H:i:s"),
             'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
-        DB::table('delivery_log_types')->insert([
+        DB::table('route_log_types')->insert([
+            'guid' => $faker->uuid(),
             'type' => 'Expired',
             'desc' => '',
             'created_at' => date("Y-m-d H:i:s"),
             'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
-        DB::table('delivery_log_types')->insert([
+        DB::table('route_log_types')->insert([
+            'guid' => $faker->uuid(),
             'type' => 'Pending',
             'desc' => '',
             'created_at' => date("Y-m-d H:i:s"),
             'updated_at' => date("Y-m-d H:i:s"),
         ]);
-
     }
 }
 
