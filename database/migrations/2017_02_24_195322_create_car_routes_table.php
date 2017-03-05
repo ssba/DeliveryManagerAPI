@@ -16,11 +16,11 @@ class CreateCarRoutesTable extends Migration
         Schema::create('car_routes', function (Blueprint $table) {
 
             $table->engine = 'InnoDB';
-            $table->increments('id');
+            $table->uuid('guid')->unique();
             $table->uuid('carGUID');
             $table->uuid('driver');
-            $table->double('lat', 4, 20);
-            $table->double('lng', 4, 20);
+            $table->double('lat', 10, 10);
+            $table->double('lng', 10, 10);
             $table->timestamps();
             $table->foreign('carGUID')->references('guid')->on('cars')->onDelete('cascade');
             $table->foreign('driver')->references('guid')->on('users')->onDelete('cascade');

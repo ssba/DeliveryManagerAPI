@@ -16,7 +16,7 @@ class CreateUserTypesTable extends Migration
         Schema::create('user_types', function (Blueprint $table) {
 
             $table->engine = 'InnoDB';
-            $table->uuid('guid');
+            $table->uuid('guid')->unique();
             $table->string('type')->unique();
             $table->text('desc');
             $table->timestamps();

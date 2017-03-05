@@ -21,7 +21,7 @@ class CreateDeliveriesTable extends Migration
             $table->uuid('productGUID');
             $table->integer('count');
             $table->timestamps();
-            $table->foreign('routeGUID')->references('id')->on('car_routes')->onDelete('cascade');
+            $table->foreign('routeGUID')->references('guid')->on('car_routes')->onDelete('cascade');
             $table->foreign('productGUID')->references('guid')->on('products')->onDelete('cascade');
 
         });

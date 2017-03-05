@@ -16,8 +16,8 @@ class CreateRouteLogTypesTable extends Migration
         Schema::create('route_log_types', function (Blueprint $table) {
 
             $table->engine = 'InnoDB';
-            $table->uuid('guid');
-            $table->string('type')->unique();
+            $table->uuid('guid')->unique();
+            $table->string('type');
             $table->text('desc');
             $table->timestamps();
 
