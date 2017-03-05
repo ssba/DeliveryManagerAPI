@@ -1,0 +1,13 @@
+{
+  "data": {
+    "type": "user_types",
+    "id": "bc1df103-de2c-48e2-96b3-c9585aec0a3d",
+    "attributes": {
+      "type": "UserType",
+      "desc": ""
+    },
+    "links": {
+      "self": "http://example.com/users/types/b78501fa-b3c2-4d0f-a989-8a937df6129b"
+    }
+  }
+}

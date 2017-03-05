@@ -1,0 +1,11 @@
+{
+  "data": {
+    "type": "cars",
+    "attributes": {
+      "car": "Car Name",
+      "width": 20.1,
+      "height": 10.5,
+      "area": 5.75
+    }
+  }
+}

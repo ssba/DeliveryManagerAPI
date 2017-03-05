@@ -1,0 +1,15 @@
+{
+  "data": {
+    "type": "products",
+    "attributes": {
+      "sku": "sku001",
+      "name": "Product One",
+      "width": 20.1,
+      "height": 10.5,
+      "length": 5.75,
+      "volume": 15.1,
+      "weigth": 3,
+      "image": "/img/sku001.png"
+    }
+  }
+}

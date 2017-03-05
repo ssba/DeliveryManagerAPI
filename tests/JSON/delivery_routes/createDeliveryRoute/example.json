@@ -1,0 +1,27 @@
+{
+  "data": {
+    "type": "delivery_routes",
+    "id": "9ccd9e19-ea29-48dc-a2d5-7da0297656f0",
+    "attributes": {
+      "lat": 55.75309215,
+      "lng": 37.60906224
+    },
+    "relationships": {
+      "car": {
+        "data": {
+          "type": "cars",
+          "id": "0d98e4f5-024f-4160-917f-7a713fb6d16c"
+        }
+      },
+      "driver": {
+        "data": {
+          "type": "user",
+          "id": "85748427-1500-4cd8-8595-bcefa1bd86c6"
+        }
+      }
+    },
+    "links": {
+      "self": "http://example.com/delivery_routes/9ccd9e19-ea29-48dc-a2d5-7da0297656f0"
+    }
+  }
+}

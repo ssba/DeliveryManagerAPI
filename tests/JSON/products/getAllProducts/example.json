@@ -1,0 +1,41 @@
+{
+  "data": [
+    {
+      "type": "products",
+      "id": "b78501fa-b3c2-4d0f-a989-8a937df6129b",
+      "attributes": {
+        "sku": "sku001",
+        "name": "Product One",
+        "width": 20.1,
+        "height": 10.5,
+        "length": 5.75,
+        "volume": 15.1,
+        "weigth": 3,
+        "image": "/img/sku001.png"
+      },
+      "links": {
+        "self": "http://example.com/products/b78501fa-b3c2-4d0f-a989-8a937df6129b"
+      }
+    },
+    {
+      "type": "products",
+      "id": "44ddee9a-6642-4abc-a1c5-daf43ddafdf1",
+      "attributes": {
+        "sku": "sku002",
+        "name": "Product Two",
+        "width": 20.1,
+        "height": 10.5,
+        "length": 5.75,
+        "volume": 15.1,
+        "weigth": 3,
+        "image": "/img/sku002.png"
+      },
+      "links": {
+        "self": "http://example.com/products/44ddee9a-6642-4abc-a1c5-daf43ddafdf1"
+      }
+    }
+  ],
+  "links": {
+    "self": "http://example.com/products"
+  }
+}

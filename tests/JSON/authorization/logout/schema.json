@@ -1,0 +1,109 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "pattern": "^authorization"
+        },
+        "id": {
+          "type": "string"
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "token": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{5,40}$"
+            },
+            "seconds": {
+              "type": "string",
+              "pattern": "^[0-9]{4,5}$"
+            },
+            "active_till": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "user_agent": {
+              "type": "string"
+            },
+            "ip": {
+              "type": "string",
+              "format": "ipv4"
+            },
+            "title": {
+              "type": "string",
+              "pattern": "^Logout$"
+            }
+          },
+          "required": [
+            "token",
+            "seconds",
+            "active_till",
+            "user_agent",
+            "ip",
+            "title"
+          ]
+        },
+        "relationships": {
+          "type": "object",
+          "properties": {
+            "staff": {
+              "type": "object",
+              "properties": {
+                "links": {
+                  "type": "object",
+                  "properties": {
+                    "self": {
+                      "type": "string",
+                      "format": "uri"
+                    }
+                  },
+                  "required": [
+                    "self"
+                  ]
+                },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "pattern": "^user$"
+                    },
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}$"
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "id"
+                  ]
+                }
+              },
+              "required": [
+                "links",
+                "data"
+              ]
+            }
+          },
+          "required": [
+            "staff"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "id",
+        "attributes",
+        "relationships"
+      ]
+    }
+  },
+  "required": [
+    "data"
+  ]
+}

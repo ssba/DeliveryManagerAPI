@@ -1,0 +1,42 @@
+{
+  "data": {
+    "type": "authorization",
+    "id": "9af025ea-f8fb-11e6-bc64-92361f002671",
+    "attributes": {
+      "old": {
+        "token": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+        "seconds": "1500",
+        "active_till": "2017-12-31T23:59:59",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+        "ip": "172.68.10.227"
+      },
+      "new": {
+        "token": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+        "seconds": "1500",
+        "active_till": "2017-12-31T23:59:59",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+        "ip": "172.68.10.227"
+      },
+      "title": "Renew token key"
+    },
+    "relationships": {
+      "staff": {
+        "links": {
+          "self": "http://example.com/token/da39a3ee5e6b4b0d3255bfef95601890afd80709/relationships/staff"
+        },
+        "data": {
+          "type": "user",
+          "id": "6a48c6cc-277d-4ef3-a6b3-d8723d6d9093"
+        }
+      }
+    },
+    "links": {
+      "related": {
+        "href": "http://example.com/logout?_method=delete&token=da39a3ee5e6b4b0d3255bfef95601890afd80709",
+        "attributes": {
+          "title": "Token destroy link"
+        }
+      }
+    }
+  }
+}

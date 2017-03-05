@@ -1,0 +1,26 @@
+{
+  "data": {
+    "type": "delivery",
+    "id": "bca02724-6b5e-492c-8051-34e14f450c6d",
+    "attributes": {
+      "count": 3
+    },
+    "relationships": {
+      "delivery_routes": {
+        "data": {
+          "type": "delivery_routes",
+          "id": "0d98e4f5-024f-4160-917f-7a713fb6d16c"
+        }
+      },
+      "products": {
+        "data": {
+          "type": "products",
+          "id": "85748427-1500-4cd8-8595-bcefa1bd86c6"
+        }
+      }
+    }
+  },
+  "links": {
+    "self": "http://example.com/delivery/bca02724-6b5e-492c-8051-34e14f450c6d"
+  }
+}

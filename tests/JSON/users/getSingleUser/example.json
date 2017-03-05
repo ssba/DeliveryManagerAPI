@@ -1,0 +1,14 @@
+{
+  "data": {
+    "type": "users",
+    "id": "b78501fa-b3c2-4d0f-a989-8a937df6129b",
+    "attributes": {
+      "email": "johndoe@example.com",
+      "fname": "John",
+      "lname": "Doe"
+    }
+  },
+  "links": {
+    "self": "http://example.com/users/b78501fa-b3c2-4d0f-a989-8a937df6129b"
+  }
+}

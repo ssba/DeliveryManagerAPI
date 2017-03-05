@@ -1,0 +1,51 @@
+{
+  "data": [
+    {
+      "type": "delivery_route_logs",
+      "id": "6d711805-4c3d-4801-b237-e7c32870d690",
+      "attributes": {
+        "type": "typeExample",
+        "routeGUID": "85748427-1500-4cd8-8595-bcefa1bd86c6"
+      },
+      "relationships": {
+        "route_logs_type": {
+          "data": {
+            "type": "route_logs_type",
+            "id": "0d98e4f5-024f-4160-917f-7a713fb6d16c"
+          }
+        },
+        "delivery_routes": {
+          "data": {
+            "type": "delivery_routes",
+            "id": "85748427-1500-4cd8-8595-bcefa1bd86c6"
+          }
+        }
+      }
+    },
+    {
+      "type": "delivery_route_logs",
+      "id": "1fa595bb-d03e-4c1b-b282-9cbea5d8d1f0",
+      "attributes": {
+        "type": "typeExample2",
+        "routeGUID": "85748427-1500-4cd8-8595-bcefa1bd86c6"
+      },
+      "relationships": {
+        "route_logs_type": {
+          "data": {
+            "type": "route_logs_type",
+            "id": "a805c6cc-7cd9-46bf-b03a-1b4ad6b2c07a"
+          }
+        },
+        "delivery_routes": {
+          "data": {
+            "type": "delivery_routes",
+            "id": "85748427-1500-4cd8-8595-bcefa1bd86c6"
+          }
+        }
+      }
+    }
+  ],
+  "links": {
+    "self": "http://example.com/delivery/24e49a7a-8ff8-43af-9435-c02e3597feca/routes/6c23922e-48fe-4cb4-a2d1-89e165856230/logs/"
+  }
+}

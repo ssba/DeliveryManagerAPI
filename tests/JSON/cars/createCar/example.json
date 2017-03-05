@@ -1,0 +1,12 @@
+{
+  "data": {
+    "type": "cars",
+    "id": "b78501fa-b3c2-4d0f-a989-8a937df6129b",
+    "attributes": {
+      "car": "Car Name",
+      "width": 2.1,
+      "height": 1.5,
+      "area": 0.75
+    }
+  }
+}

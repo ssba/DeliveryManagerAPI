@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "pattern": "^users$"
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}$"
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "email": {
+              "type": "string",
+              "format": "email"
+            },
+            "fname": {
+              "type": "string"
+            },
+            "lname": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "email",
+            "fname",
+            "lname"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "id",
+        "attributes"
+      ]
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "self"
+      ]
+    }
+  },
+  "required": [
+    "data",
+    "links"
+  ]
+}

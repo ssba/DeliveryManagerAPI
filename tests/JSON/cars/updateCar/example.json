@@ -1,0 +1,17 @@
+{
+  "data": [
+    {
+      "type": "cars",
+      "id": "879b8011-88ef-4414-9865-c1fe8c1a94e2",
+      "attributes": {
+        "car": "Car Name 2",
+        "width": 2.1,
+        "height": 1.5,
+        "area": 0.75
+      },
+      "links": {
+        "self": "http://example.com/cars/879b8011-88ef-4414-9865-c1fe8c1a94e2"
+      }
+    }
+  ]
+}

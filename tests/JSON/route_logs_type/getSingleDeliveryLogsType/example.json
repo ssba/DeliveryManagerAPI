@@ -1,0 +1,13 @@
+{
+  "data": {
+    "type": "route_logs_type",
+    "id": "828c98f5-beea-4f90-9df5-8d869da4bd04",
+    "attributes": {
+      "type": "routeType1",
+      "desc": ""
+    }
+  },
+  "links": {
+    "self": "http://example.com/delivery/logs/type/828c98f5-beea-4f90-9df5-8d869da4bd04"
+  }
+}
