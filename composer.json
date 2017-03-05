@@ -14,6 +14,7 @@
         "laravel/tinker": "~1.0",
         "laravelbook/ardent": "3.*",
         "predis/predis": "^1.1",
+        "sentry/sentry-laravel": "^0.6.1",
         "webpatser/laravel-uuid": "2.*"
     },
     "require-dev": {
