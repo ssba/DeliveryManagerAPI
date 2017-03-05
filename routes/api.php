@@ -11,6 +11,12 @@ define("UUID_REGEXP_PATTERN", '^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-
  */
 Route::group(['middleware' => ['throttle']], function () {
 
+    Route::get('/', [
+        'as' => 'Root:EmptyResource',
+        function () {
+            throw new \App\Exceptions\BadRequestExeption("Empty resource is not allowed");
+        }
+    ]);
 
     Route::group(['group' => 'Authorization', 'as' => 'authorization', 'datatable' => 'user'], function () {
 
