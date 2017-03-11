@@ -17,7 +17,7 @@ class CreateRouteLogTypesTable extends Migration
 
             $table->engine = 'InnoDB';
             $table->uuid('guid')->unique();
-            $table->string('type');
+            $table->string('type')->unique();
             $table->text('desc');
             $table->timestamps();
 
