@@ -88,4 +88,7 @@ return [
 
     'prefix' => 'dm',
 
+
+    'seconds' => 99999
+
 ];

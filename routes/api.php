@@ -2,14 +2,15 @@
 
 use Illuminate\Http\Request;
 
-define("UUID_REGEXP_PATTERN", '^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}$');
+if(!defined("UUID_REGEXP_PATTERN"))
+    define("UUID_REGEXP_PATTERN", '^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}$');
 
 /**
  *  group - system alias
  *  as - type
  *  datatable - afected dt
  */
-Route::group(['middleware' => ['throttle']], function () {
+Route::group(['middleware' => ['throttle', 'auth.simple']], function () {
 
     Route::get('/', [
         'as' => 'Root:EmptyResource',
