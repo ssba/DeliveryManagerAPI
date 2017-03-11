@@ -23,13 +23,13 @@ class Handler extends ExceptionHandler
      *
      * @var array
      */
-    protected $dontReport = [ /*
-        \Illuminate\Auth\AuthenticationException::class,
-        \Illuminate\Auth\Access\AuthorizationException::class,
-        \Symfony\Component\HttpKernel\Exception\HttpException::class,
-        \Illuminate\Database\Eloquent\ModelNotFoundException::class,
-        \Illuminate\Session\TokenMismatchException::class,
-        \Illuminate\Validation\ValidationException::class, */
+    protected $dontReport = [
+//        \Illuminate\Auth\AuthenticationException::class,
+//        \Illuminate\Auth\Access\AuthorizationException::class,
+//        \Symfony\Component\HttpKernel\Exception\HttpException::class,
+//        \Illuminate\Database\Eloquent\ModelNotFoundException::class,
+//        \Illuminate\Session\TokenMismatchException::class,
+//        \Illuminate\Validation\ValidationException::class,
     ];
 
     /**
@@ -43,7 +43,7 @@ class Handler extends ExceptionHandler
     public function report(Exception $exception)
     {
         if ($this->shouldReport($exception)) {
-            $this->sentryID = app('sentry')->captureException($exception);
+            $this->sentryID = Config::get('app.debug') ? "debug" : app('sentry')->captureException($exception);
         }
         parent::report($exception);
     }
