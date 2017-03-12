@@ -4,7 +4,7 @@ namespace App;
 
 use LaravelArdent\Ardent\Ardent;
 
-class UserType extends Ardent
+class RouteLogType extends Ardent
 {
 
     /**
@@ -19,7 +19,7 @@ class UserType extends Ardent
      *
      * @var string
      */
-    protected $table = 'user_types';
+    protected $table = 'route_log_types';
 
     /**
      * Primary Key for the model.
@@ -51,7 +51,7 @@ class UserType extends Ardent
      */
     public static $rules = [
         'guid' => 'required|string|regex:/' . UUID_REGEXP_PATTERN. '/',
-        'type' => 'required|string|unique:user_types,type',
+        'type' => 'required|string|unique:route_log_types,type',
         'desc' => 'required|string',
     ];
 }

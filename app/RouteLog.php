@@ -4,7 +4,7 @@ namespace App;
 
 use LaravelArdent\Ardent\Ardent;
 
-class CarRoute extends Ardent
+class RouteLog extends Ardent
 {
 
     /**
@@ -19,7 +19,7 @@ class CarRoute extends Ardent
      *
      * @var string
      */
-    protected $table = 'car_route';
+    protected $table = 'route_logs';
 
     /**
      * Primary Key for the model.
@@ -34,7 +34,7 @@ class CarRoute extends Ardent
      * @var array
      */
     protected $fillable = [
-        'lat', 'lng'
+        'type', 'created_at', 'updated_at'
     ];
 
     /**
@@ -43,7 +43,7 @@ class CarRoute extends Ardent
      * @var array
      */
     protected $hidden = [
-        'guid', 'car', 'driver', 'created_at', 'updated_at'
+        'guid', 'type'
     ];
 
     /**
@@ -53,31 +53,28 @@ class CarRoute extends Ardent
      */
     public static $rules = [
         'guid' => 'required|string|regex:/' . UUID_REGEXP_PATTERN. '/',
-        'car' => 'required|string|exists:cars,guid|regex:/' . UUID_REGEXP_PATTERN. '/',
-        'driver' => 'required|string|exists:user,guid|regex:/' . UUID_REGEXP_PATTERN. '/',
-        'lat' => 'required|numeric',
-        'lng' => 'required|numeric',
+        'type' => 'required|string|exists:route_log_types,type',
+        'route' => 'required|string|exists:car_route,guid|regex:/' . UUID_REGEXP_PATTERN. '/'
     ];
     // TODO Add 'updated_at' rule
 
     /**
-     * Get Car
+     * Get Type
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function car()
+    public function type()
     {
-        return $this->hasOne('App\Cars','guid','car');
+        return $this->hasOne('App\RouteLogType','type','type');
     }
 
     /**
-     * Get Driver
+     * Get Route
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function driver()
+    public function route()
     {
-        return $this->hasOne('App\User','guid','driver');
+        return $this->hasOne('App\Product','guid','route');
     }
-
 }
