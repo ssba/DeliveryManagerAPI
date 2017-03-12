@@ -18,10 +18,10 @@ class CreateRouteLogsTable extends Migration
             $table->engine = 'InnoDB';
             $table->uuid('guid')->unique();
             $table->string('type');
-            $table->uuid('routeGUID');
+            $table->uuid('route');
             $table->timestamps();
             $table->foreign('type')->references('type')->on('route_log_types')->onDelete('cascade');
-            $table->foreign('routeGUID')->references('guid')->on('car_routes')->onDelete('cascade');
+            $table->foreign('route')->references('guid')->on('car_routes')->onDelete('cascade');
 
         });
     }

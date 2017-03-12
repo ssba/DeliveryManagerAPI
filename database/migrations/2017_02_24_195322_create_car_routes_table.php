@@ -17,12 +17,12 @@ class CreateCarRoutesTable extends Migration
 
             $table->engine = 'InnoDB';
             $table->uuid('guid')->unique();
-            $table->uuid('carGUID');
+            $table->uuid('car');
             $table->uuid('driver');
             $table->double('lat', 10, 10);
             $table->double('lng', 10, 10);
             $table->timestamps();
-            $table->foreign('carGUID')->references('guid')->on('cars')->onDelete('cascade');
+            $table->foreign('car')->references('guid')->on('cars')->onDelete('cascade');
             $table->foreign('driver')->references('guid')->on('users')->onDelete('cascade');
 
         });

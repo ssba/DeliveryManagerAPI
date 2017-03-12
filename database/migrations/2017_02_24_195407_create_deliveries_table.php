@@ -17,12 +17,12 @@ class CreateDeliveriesTable extends Migration
 
             $table->engine = 'InnoDB';
             $table->uuid('guid')->unique();
-            $table->uuid('routeGUID');
-            $table->uuid('productGUID');
+            $table->uuid('route');
+            $table->uuid('product');
             $table->integer('count');
             $table->timestamps();
-            $table->foreign('routeGUID')->references('guid')->on('car_routes')->onDelete('cascade');
-            $table->foreign('productGUID')->references('guid')->on('products')->onDelete('cascade');
+            $table->foreign('route')->references('guid')->on('car_routes')->onDelete('cascade');
+            $table->foreign('product')->references('guid')->on('products')->onDelete('cascade');
 
         });
     }

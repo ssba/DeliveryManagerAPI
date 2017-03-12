@@ -4,7 +4,7 @@
     "id": "6d711805-4c3d-4801-b237-e7c32870d690",
     "attributes": {
       "type": "typeExample",
-      "routeGUID": "85748427-1500-4cd8-8595-bcefa1bd86c6"
+      "route": "85748427-1500-4cd8-8595-bcefa1bd86c6"
     },
     "relationships": {
       "car": {

@@ -5,7 +5,7 @@
       "id": "6d711805-4c3d-4801-b237-e7c32870d690",
       "attributes": {
         "type": "typeExample",
-        "routeGUID": "85748427-1500-4cd8-8595-bcefa1bd86c6"
+        "route": "85748427-1500-4cd8-8595-bcefa1bd86c6"
       },
       "relationships": {
         "route_logs_type": {
@@ -27,7 +27,7 @@
       "id": "1fa595bb-d03e-4c1b-b282-9cbea5d8d1f0",
       "attributes": {
         "type": "typeExample2",
-        "routeGUID": "85748427-1500-4cd8-8595-bcefa1bd86c6"
+        "route": "85748427-1500-4cd8-8595-bcefa1bd86c6"
       },
       "relationships": {
         "route_logs_type": {

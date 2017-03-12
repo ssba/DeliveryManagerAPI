@@ -18,13 +18,13 @@
             "type": {
               "type": "string"
             },
-            "routeGUID": {
+            "route": {
               "type": "string"
             }
           },
           "required": [
             "type",
-            "routeGUID"
+            "route"
           ]
         },
         "relationships": {

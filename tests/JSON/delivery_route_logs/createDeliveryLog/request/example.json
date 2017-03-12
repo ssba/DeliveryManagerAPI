@@ -3,7 +3,7 @@
     "type": "delivery_route_logs",
     "attributes": {
       "type": "typeExample",
-      "routeGUID": "85748427-1500-4cd8-8595-bcefa1bd86c6"
+      "route": "85748427-1500-4cd8-8595-bcefa1bd86c6"
     },
     "relationships": {
       "route_logs_type": {
