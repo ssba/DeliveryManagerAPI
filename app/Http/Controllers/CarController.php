@@ -92,10 +92,10 @@ class CarController extends Controller
 
         DB::transaction(function () use ($request, $car, $carRequest) {
 
-            $chapter_update = $car->update($carRequest);
+            $car_update = $car->update($carRequest);
 
-            if (!$chapter_update)
-                throw new ValidationException($carRequest->errors());
+            if (!$car_update)
+                throw new ValidationException($car_update->errors());
 
         });
 
