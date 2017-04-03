@@ -2,32 +2,36 @@
   "data": [
     {
       "type": "cars",
-      "id": "b78501fa-b3c2-4d0f-a989-8a937df6129b",
+      "id": "a8180a0c-a3c9-4734-afda-841929cf2035",
       "attributes": {
-        "car": "Car Name",
-        "width": 2.1,
-        "height": 1.5,
-        "area": 0.75
+        "car": "GAZelle 3302 (RUS) N3",
+        "width": "9.8",
+        "height": "7.5",
+        "length": "6.2",
+        "capacity": "3307.0",
+        "volume": "413.2"
       },
       "links": {
-        "self": "http://example.com/cars/b78501fa-b3c2-4d0f-a989-8a937df6129b"
+        "self": "http://deliverymanagerapi.local/api/cars/a8180a0c-a3c9-4734-afda-841929cf2035"
       }
     },
     {
       "type": "cars",
-      "id": "879b8011-88ef-4414-9865-c1fe8c1a94e2",
+      "id": "5d177260-d7e3-41b9-a86f-caf70eb8e29a",
       "attributes": {
-        "car": "Car Name 2",
-        "width": 2.1,
-        "height": 1.5,
-        "area": 0.75
+        "car": "GAZelle 330202 (RUS) N1",
+        "width": "13.78",
+        "height": "7.5",
+        "length": "6.2",
+        "capacity": "3307.0",
+        "volume": "646.3"
       },
       "links": {
-        "self": "http://example.com/cars/879b8011-88ef-4414-9865-c1fe8c1a94e2"
+        "self": "http://deliverymanagerapi.local/api/cars/5d177260-d7e3-41b9-a86f-caf70eb8e29a"
       }
     }
   ],
   "links": {
-    "self": "http://example.com/cars"
+    "self": "http://deliverymanagerapi.local/api/cars"
   }
 }

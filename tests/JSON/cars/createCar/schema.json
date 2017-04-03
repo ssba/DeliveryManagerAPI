@@ -20,40 +20,35 @@
               "type": "string"
             },
             "width": {
-              "type": "number"
+              "type": "string"
             },
             "height": {
-              "type": "number"
+              "type": "string"
             },
-            "area": {
-              "type": "number"
+            "length": {
+              "type": "string"
+            },
+            "capacity": {
+              "type": "string"
+            },
+            "volume": {
+              "type": "string"
             }
           },
           "required": [
             "car",
             "width",
             "height",
-            "area"
-          ]
-        },
-        "links": {
-          "type": "object",
-          "properties": {
-            "self": {
-              "type": "string",
-              "format": "uri"
-            }
-          },
-          "required": [
-            "self"
+            "length",
+            "capacity",
+            "volume"
           ]
         }
       },
       "required": [
         "type",
         "id",
-        "attributes",
-        "links"
+        "attributes"
       ]
     }
   },

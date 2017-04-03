@@ -49,14 +49,16 @@ $factory->define(App\RouteLogType::class, function (Faker\Generator $faker) {
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\Car::class, function (Faker\Generator $faker) {
-    static $guid;
-
     return [
-        'guid' => $guid ?: $guid = Uuid::generate(4),
+        'guid' => (string)Uuid::generate(4),
         'car' => $faker->unique()->word,
-        'width' => rand(10,99),
-        'height' => rand(10,99),
-        'area' => rand(10,99),
+        'width' => (string)rand(10,99),
+        'height' => (string)rand(10,99),
+        'length' => (string)rand(10,99),
+        'capacity' => (string)rand(10,99),
+        'volume' => (string)rand(10,99),
+        'created_at' => $faker->dateTime('now'),
+        'updated_at' => $faker->dateTime('now'),
     ];
 });
 

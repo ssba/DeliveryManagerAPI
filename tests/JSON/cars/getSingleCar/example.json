@@ -1,15 +1,17 @@
 {
   "data": {
     "type": "cars",
-    "id": "879b8011-88ef-4414-9865-c1fe8c1a94e2",
+    "id": "04a19620-2fbf-4047-a13a-cc5af0bbf22c",
     "attributes": {
-      "car": "Car Name 2",
-      "width": 2.1,
-      "height": 1.5,
-      "area": 0.75
-    },
-    "links": {
-      "self": "http://example.com/cars/879b8011-88ef-4414-9865-c1fe8c1a94e2"
+      "car": "GAZelle 3302 (RUS) N1",
+      "width": "9.8",
+      "height": "7.5",
+      "length": "6.2",
+      "capacity": "3307.0",
+      "volume": "413.2"
     }
+  },
+  "links": {
+    "self": "http://deliverymanagerapi.local/api/cars/04a19620-2fbf-4047-a13a-cc5af0bbf22c"
   }
 }

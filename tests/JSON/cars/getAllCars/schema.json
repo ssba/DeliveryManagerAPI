@@ -22,20 +22,28 @@
                 "type": "string"
               },
               "width": {
-                "type": "number"
+                "type": "string"
               },
               "height": {
-                "type": "number"
+                "type": "string"
               },
-              "area": {
-                "type": "number"
+              "length": {
+                "type": "string"
+              },
+              "capacity": {
+                "type": "string"
+              },
+              "volume": {
+                "type": "string"
               }
             },
             "required": [
               "car",
               "width",
               "height",
-              "area"
+              "length",
+              "capacity",
+              "volume"
             ]
           },
           "links": {

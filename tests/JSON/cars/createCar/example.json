@@ -1,12 +1,14 @@
 {
   "data": {
     "type": "cars",
-    "id": "b78501fa-b3c2-4d0f-a989-8a937df6129b",
+    "id": "04a19620-2fbf-4047-a13a-cc5af0bbf22c",
     "attributes": {
-      "car": "Car Name",
-      "width": 2.1,
-      "height": 1.5,
-      "area": 0.75
+      "car": "GAZelle 3302 (RUS) N1",
+      "width": "9.8",
+      "height": "7.5",
+      "length": "6.2",
+      "capacity": "3307.0",
+      "volume": "413.2"
     }
   }
 }

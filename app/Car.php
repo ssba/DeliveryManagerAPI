@@ -34,7 +34,7 @@ class Car extends Ardent
      * @var array
      */
     protected $fillable = [
-        'car', 'width', 'height', 'area'
+        'guid', 'car', 'width', 'height', 'length', 'capacity', 'volume'
     ];
 
     /**
@@ -54,10 +54,11 @@ class Car extends Ardent
     public static $rules = [
         'guid' => 'required|string|regex:/' . UUID_REGEXP_PATTERN. '/',
         'car' => 'required|string',
-        'width' => 'required|numeric',
-        'height' => 'required|numeric',
-        'area' => 'required|numeric',
-        'desc' => 'string',
+        'width' => 'required|string',
+        'height' => 'required|string',
+        'length' => 'required|string',
+        'capacity' => 'required|string',
+        'volume' => 'required|string',
     ];
     // TODO Add 'updated_at' rule
 }

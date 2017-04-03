@@ -12,6 +12,8 @@ class CarsTest extends TestCase
     use DatabaseTransactions;
     use WithoutMiddleware;
 
+//    public $connectionsToTransact = "sqlite_test_database";
+
     /**
      *
      *
@@ -57,9 +59,11 @@ class CarsTest extends TestCase
 
         $response = $this->json('POST', '/api/cars', [
             'car' => 'CarName',
-            'width' => 20,
-            'height' => 20,
-            'area' => 20,
+            'width' => "20",
+            'height' => "20",
+            'length' => "413.2",
+            'capacity' => "413.2",
+            'volume' => "413.2",
         ]);
 
         $schema  = $this->createJSONSchema('cars',"createCar");
@@ -78,14 +82,17 @@ class CarsTest extends TestCase
     {
         fwrite(STDOUT,"Testing PUT:/api/cars/{carGUID}\n");
 
-        $response = $this->json('POST', '/api/cars/a8180a0c-a3c9-4734-afda-841929cf2035', [
+        $car = factory(\App\Car::class)->create();
+        $response = $this->json('PUT', "/api/cars/$car->guid", [
             'car' => 'CarName_Updates',
-            'width' => 99,
-            'height' => 99,
-            'area' => 99,
+            'width' => "22",
+            'height' => "22",
+            'length' => "415",
+            'capacity' => "415",
+            'volume' => "415",
         ]);
 
-        $schema  = $this->createJSONSchema('cars',"updateCar");
+        $schema  = $this->createJSONSchema('cars',"getSingleCar");
         $this->JSONSchemaValidator->check( $response->getContent() , $schema );
 
         $this->assertTrue( $this->JSONSchemaValidator->isValid() );
@@ -101,14 +108,9 @@ class CarsTest extends TestCase
     {
         fwrite(STDOUT,"Testing DELETE:/api/cars/{carGUID}\n");
 
-        $generatedGUID = Uuid::generate(4);
-
-        factory(\App\Car::class)->make([
-            'guid' => $generatedGUID,
-        ]);
-
-        $response = $this->json('DELETE', '/api/cars/'.$generatedGUID );
-        $schema  = $this->createJSONSchema('cars',"deleteCar");
+        $car = factory(\App\Car::class)->create();
+        $response = $this->json('DELETE', "/api/cars/$car->guid" );
+        $schema  = $this->createJSONSchema('cars',"getSingleCar");
         $this->JSONSchemaValidator->check( $response->getContent() , $schema );
 
         $this->assertTrue( $this->JSONSchemaValidator->isValid() );
