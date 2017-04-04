@@ -34,7 +34,7 @@ class UserType extends Ardent
      * @var array
      */
     protected $fillable = [
-        'type', 'desc'
+        'guid', 'type', 'desc'
     ];
 
     /**

@@ -34,7 +34,7 @@ class Product extends Ardent
      * @var array
      */
     protected $fillable = [
-        'name', 'width', 'height', 'length', 'volume', 'weigth', 'image'
+        'guid', 'sku', 'name', 'width', 'height', 'length', 'volume', 'weight', 'image'
     ];
 
     /**
@@ -43,7 +43,7 @@ class Product extends Ardent
      * @var array
      */
     protected $hidden = [
-        'guid', 'sku', 'created_at', 'updated_at'
+        'guid', 'created_at', 'updated_at'
     ];
 
     /**
@@ -59,7 +59,7 @@ class Product extends Ardent
         'height' => 'required|numeric',
         'length' => 'required|numeric',
         'volume' => 'required|numeric',
-        'weigth' => 'required|numeric',
+        'weight' => 'required|numeric',
         'image' => 'string',
     ];
     // TODO Add 'updated_at' rule
