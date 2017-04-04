@@ -23,6 +23,7 @@ class CreateProductsTable extends Migration
             $table->double('height', 15, 8)->comment('ft');
             $table->double('length', 15, 8)->comment('ft');
             $table->double('volume', 15, 8)->comment('ft3');
+            $table->double('weight', 15, 8)->comment('ft');
             $table->string('image')->nullable();
             $table->timestamps();
 
