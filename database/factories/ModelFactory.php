@@ -65,7 +65,17 @@ $factory->define(App\Car::class, function (Faker\Generator $faker) {
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\Product::class, function (Faker\Generator $faker) {
-
+    return [
+        'guid' => (string)Uuid::generate(4),
+        'car' => $faker->unique()->word,
+        'width' => (string)rand(10,99),
+        'height' => (string)rand(10,99),
+        'length' => (string)rand(10,99),
+        'capacity' => (string)rand(10,99),
+        'volume' => (string)rand(10,99),
+        'created_at' => $faker->dateTime('now'),
+        'updated_at' => $faker->dateTime('now'),
+    ];
 });
 
 
