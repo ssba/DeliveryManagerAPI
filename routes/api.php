@@ -10,7 +10,7 @@ if(!defined("UUID_REGEXP_PATTERN"))
  *  as - type
  *  datatable - afected dt
  */
-Route::group(['middleware' => ['throttle', 'auth.simple']], function () {
+Route::group(['middleware' => ['throttle', 'auth.simple', 'output']], function () {
 
     Route::get('/', [
         'as' => 'Root:EmptyResource',
@@ -86,7 +86,7 @@ Route::group(['middleware' => ['throttle', 'auth.simple']], function () {
         /**
          *
          */
-        Route::post('users/types/', ['as' => 'CreateNewDeliverysLogsType', 'uses' => 'DeliverysLogsTypeController@createSingle', 'role' => 'root']);
+        Route::post('delivery/logs/type/', ['as' => 'CreateNewDeliverysLogsType', 'uses' => 'DeliverysLogsTypeController@createSingle', 'role' => 'root']);
 
         /**
          *
