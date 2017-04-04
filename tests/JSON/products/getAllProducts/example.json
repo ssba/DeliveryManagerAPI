@@ -10,7 +10,7 @@
         "height": 10.5,
         "length": 5.75,
         "volume": 15.1,
-        "weigth": 3,
+        "weight": 3,
         "image": "/img/sku001.png"
       },
       "links": {
@@ -27,8 +27,8 @@
         "height": 10.5,
         "length": 5.75,
         "volume": 15.1,
-        "weigth": 3,
-        "image": "/img/sku002.png"
+        "weight": 3,
+        "image": null
       },
       "links": {
         "self": "http://example.com/products/44ddee9a-6642-4abc-a1c5-daf43ddafdf1"

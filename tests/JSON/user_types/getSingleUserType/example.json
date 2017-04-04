@@ -5,12 +5,9 @@
     "attributes": {
       "type": "User Type 1",
       "desc": ""
-    },
-    "links": {
-      "self": "http://example.com/users/types/b78501fa-b3c2-4d0f-a989-8a937df6129b"
     }
   },
   "links": {
-    "self": "http://example.com/users/types/"
+    "self": "http://example.com/users/types/b78501fa-b3c2-4d0f-a989-8a937df6129b"
   }
 }
