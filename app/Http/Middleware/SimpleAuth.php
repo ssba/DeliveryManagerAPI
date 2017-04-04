@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Config;
 use Route;
 use Cache;
 use App\User;
@@ -19,6 +20,9 @@ class SimpleAuth
      */
     public function handle($request, Closure $next)
     {
+        if (Config::get('app.debug'))
+            return $next($request);
+
         $routeRole = Route::getCurrentRoute()->action['role'];
         if(!is_array($routeRole))
             $routeRole = [$routeRole];
