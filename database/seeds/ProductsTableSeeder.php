@@ -40,13 +40,14 @@ class ProductsTableSeeder extends Seeder
                 'height' => mt_rand (10, 50) / 10,
                 'length' => mt_rand (10, 50) / 10,
                 'volume' => mt_rand (50, 100) / 10,
+                'weight' => mt_rand (50, 100) / 10,
                 'image' => null,
                 'created_at' => date("Y-m-d H:i:s"),
                 'updated_at' => date("Y-m-d H:i:s"),
             ]);
 
         }
-
+// TODO Change tp Factory
 
     }
 }
