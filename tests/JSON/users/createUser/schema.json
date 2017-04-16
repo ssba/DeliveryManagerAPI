@@ -33,28 +33,70 @@
             "lname"
           ]
         },
-        "links": {
-          "type": "object",
+        "relationships": {
           "properties": {
-            "self": {
-              "type": "string",
-              "format": "uri"
+            "role": {
+              "properties": {
+                "data": {
+                  "properties": {
+                    "attributes": {
+                      "properties": {
+                        "desc": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "guid": {
+                      "type": "string",
+                      "pattern": "^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}$"
+                    },
+                    "type": {
+                      "type": "string",
+                      "pattern": "^user_types$"
+                    }
+                  },
+                  "type": "object"
+                },
+                "links": {
+                  "properties": {
+                    "self": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "type": "object"
             }
           },
-          "required": [
-            "self"
-          ]
+          "type": "object"
         }
       },
       "required": [
         "type",
         "id",
-        "attributes",
-        "links"
+        "attributes"
+      ]
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "self"
       ]
     }
   },
   "required": [
-    "data"
+    "data",
+    "links"
   ]
 }

@@ -6,6 +6,21 @@
       "email": "johndoe@example.com",
       "fname": "John",
       "lname": "Doe"
+    },
+    "relationships": {
+      "role": {
+        "links": {
+          "self": "http://example.com/users/types/b78501fa-b3c2-4d0f-a989-8a937df6129b"
+        },
+        "data": {
+          "type": "user_types",
+          "guid": "b78501fa-b3c2-4d0f-a989-8a937df6129b",
+          "attributes": {
+            "type": "User Type 1",
+            "desc": ""
+          }
+        }
+      }
     }
   },
   "links": {

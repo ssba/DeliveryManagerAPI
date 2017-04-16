@@ -1,9 +1,0 @@
-{
-  "data": {
-    "type": "route_logs_type",
-    "attributes": {
-      "type": "routeType",
-      "desc": ""
-    }
-  }
-}

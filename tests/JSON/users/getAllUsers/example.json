@@ -8,6 +8,21 @@
         "fname": "John",
         "lname": "Doe"
       },
+      "relationships": {
+        "role": {
+          "links": {
+            "self": "http://example.com/users/types/b78501fa-b3c2-4d0f-a989-8a937df6129b"
+          },
+          "data": {
+            "type": "user_types",
+            "guid": "b78501fa-b3c2-4d0f-a989-8a937df6129b",
+            "attributes": {
+              "type": "User Type 1",
+              "desc": ""
+            }
+          }
+        }
+      },
       "links": {
         "self": "http://example.com/users/b78501fa-b3c2-4d0f-a989-8a937df6129b"
       }
@@ -20,6 +35,21 @@
         "fname": "Jane",
         "lname": "Doe"
       },
+      "relationships": {
+        "role": {
+          "links": {
+            "self": "http://example.com/users/types/b78501fa-b3c2-4d0f-a989-8a937df6129b"
+          },
+          "data": {
+            "type": "user_types",
+            "guid": "b78501fa-b3c2-4d0f-a989-8a937df6129b",
+            "attributes": {
+              "type": "User Type 1",
+              "desc": ""
+            }
+          }
+        }
+      },
       "links": {
         "self": "http://example.com/users/879b8011-88ef-4414-9865-c1fe8c1a94e2"
       }
@@ -28,4 +58,4 @@
   "links": {
     "self": "http://example.com/users"
   }
-}//  TODO relates to user_type
+}
