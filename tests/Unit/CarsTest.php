@@ -38,8 +38,8 @@ class CarsTest extends TestCase
     {
         fwrite(STDOUT,"Testing GET:/api/cars/{carGUID}\n");
 
-        // TODO Create Factory
-        $response = $this->json('GET', '/api/cars/04a19620-2fbf-4047-a13a-cc5af0bbf22c');
+        $car = factory(\App\Car::class)->create();
+        $response = $this->json('GET', "/api/cars/$car->guid");
         $schema  = $this->createJSONSchema('cars',"getSingleCar");
         $this->JSONSchemaValidator->check( $response->getContent() , $schema );
 

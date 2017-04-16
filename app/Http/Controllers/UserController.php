@@ -85,10 +85,9 @@ class UserController extends Controller
         $attributes = [
             'type' => $request->type,
             'email' => $request->email,
-            'password' => crypt($request->password),
+            'password' => bcrypt($request->password),
             'fname' => $request->fname,
             'lname' => $request->lname,
-
         ];
 
         DB::transaction(function () use ($request, $attributes, $newUserGUID) {
@@ -111,7 +110,7 @@ class UserController extends Controller
         $UserRequest = $request->only('type', 'email', 'password', 'fname', 'lname');
 
         if(!is_null($request->password))
-            $request->password = crypt($request->password);
+            $request->password = bcrypt($request->password);
 
         if (empty($UserRequest))
             return $this->getSingle($userGUID);

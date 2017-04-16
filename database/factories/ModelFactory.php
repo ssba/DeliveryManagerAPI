@@ -14,15 +14,31 @@ use Webpatser\Uuid\Uuid;
 */
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\UserType::class, function (Faker\Generator $faker) {
+    return [
+        'guid' => (string)Uuid::generate(4),
+        'type' => $faker->unique()->word,
+        'desc' => $faker->unique()->text
+    ];
+});
+
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
-        'name' => $faker->name,
+        'guid' => (string)Uuid::generate(4),
+        'type' =>  function () {
+            return factory(App\UserType::class)->create()->type;
+        },
         'email' => $faker->unique()->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
-        'remember_token' => str_random(10),
+        'fname' => $faker->firstName,
+        'lname' => $faker->lastName,
+        'created_at' => $faker->dateTime('now'),
+        'updated_at' => $faker->dateTime('now'),
     ];
+
 });
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
@@ -34,7 +50,6 @@ $factory->define(App\UserType::class, function (Faker\Generator $faker) {
     ];
 });
 
-
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\RouteLogType::class, function (Faker\Generator $faker) {
     return [
@@ -43,7 +58,6 @@ $factory->define(App\RouteLogType::class, function (Faker\Generator $faker) {
         'desc' => $faker->unique()->text
     ];
 });
-
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\Car::class, function (Faker\Generator $faker) {
