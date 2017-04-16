@@ -45,9 +45,22 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'guid', 'type', 'password', 'remember_token', 'role', 'created_at', 'updated_at'
     ];
 
+    /**
+     * Validators rules for Ardent validator
+     *
+     * @var array
+     */
+    public static $rules = [
+        'guid' => 'required|string|regex:/' . UUID_REGEXP_PATTERN. '/',
+        'type' => 'required|string|exists:user_types,type',
+        'email' => 'required|string|email',
+        'password' => 'required|string',
+        'fname' => 'required|string',
+        'lname' => 'required|string',
+    ];
 
     public function role()
     {

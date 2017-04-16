@@ -55,12 +55,12 @@ class Product extends Ardent
         'guid' => 'required|string|regex:/' . UUID_REGEXP_PATTERN. '/',
         'sku' => 'required|string|max:36',
         'name' => 'required|string',
-        'width' => 'required|numeric',
-        'height' => 'required|numeric',
-        'length' => 'required|numeric',
-        'volume' => 'required|numeric',
-        'weight' => 'required|numeric',
-        'image' => 'string',
+        'width' => 'required',
+        'height' => 'required',
+        'length' => 'required',
+        'volume' => 'required',
+        'weight' => 'required',
+        'image' => 'string|nullable',
     ];
     // TODO Add 'updated_at' rule
 }

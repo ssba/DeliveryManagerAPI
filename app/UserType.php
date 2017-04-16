@@ -42,7 +42,9 @@ class UserType extends Ardent
      *
      * @var array
      */
-    protected $hidden = ['guid'];
+    protected $hidden = [
+        'guid', 'created_at', 'updated_at'
+    ];
 
     /**
      * Validators rules for Ardent validator

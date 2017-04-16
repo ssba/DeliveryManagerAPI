@@ -34,7 +34,7 @@ class RouteLogType extends Ardent
      * @var array
      */
     protected $fillable = [
-        'type', 'desc'
+        'guid', 'type', 'desc'
     ];
 
     /**
