@@ -3,16 +3,14 @@
 namespace Tests\Unit;
 
 use Tests\TestCase;
-use Webpatser\Uuid\Uuid;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
+
 class CarsTest extends TestCase
 {
     use DatabaseTransactions;
     use WithoutMiddleware;
 
-//    public $connectionsToTransact = "sqlite_test_database";
 
     /**
      *
@@ -40,6 +38,7 @@ class CarsTest extends TestCase
     {
         fwrite(STDOUT,"Testing GET:/api/cars/{carGUID}\n");
 
+        // TODO Create Factory
         $response = $this->json('GET', '/api/cars/04a19620-2fbf-4047-a13a-cc5af0bbf22c');
         $schema  = $this->createJSONSchema('cars',"getSingleCar");
         $this->JSONSchemaValidator->check( $response->getContent() , $schema );

@@ -70,7 +70,7 @@ Route::group(['middleware' => ['throttle', 'auth.simple', 'output']], function (
 
     });
 
-    Route::group(['group' => 'RouteLogsType', 'as' => 'route_logs_type', 'datatable' => 'route_log_types'], function () {
+    Route::group(['group' => 'DeliveriesLogsTypeTest', 'as' => 'deliveries_route_logs_type', 'datatable' => 'route_log_types'], function () {
 
         /**
          *

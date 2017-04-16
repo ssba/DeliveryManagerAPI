@@ -1,7 +1,7 @@
 <?php
 
 use Webpatser\Uuid\Uuid;
-
+// LaravelArdent\Ardent:591 row for debud
 /*
 |--------------------------------------------------------------------------
 | Model Factories
@@ -27,9 +27,8 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\UserType::class, function (Faker\Generator $faker) {
-
     return [
-        'guid' => Uuid::generate(4),
+        'guid' => (string)Uuid::generate(4),
         'type' => $faker->unique()->word,
         'desc' => $faker->unique()->text
     ];
@@ -38,7 +37,6 @@ $factory->define(App\UserType::class, function (Faker\Generator $faker) {
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\RouteLogType::class, function (Faker\Generator $faker) {
-
     return [
         'guid' => Uuid::generate(4),
         'type' => $faker->unique()->word,
@@ -67,12 +65,14 @@ $factory->define(App\Car::class, function (Faker\Generator $faker) {
 $factory->define(App\Product::class, function (Faker\Generator $faker) {
     return [
         'guid' => (string)Uuid::generate(4),
-        'car' => $faker->unique()->word,
+        'sku' => $faker->unique()->word,
+        'name' => $faker->unique()->word,
         'width' => (string)rand(10,99),
         'height' => (string)rand(10,99),
         'length' => (string)rand(10,99),
-        'capacity' => (string)rand(10,99),
         'volume' => (string)rand(10,99),
+        'weight' => (string)rand(10,99),
+        'image' => null,
         'created_at' => $faker->dateTime('now'),
         'updated_at' => $faker->dateTime('now'),
     ];

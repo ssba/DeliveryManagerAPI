@@ -28,7 +28,7 @@ class AuthorizationTest extends TestCase
         $this->JSONSchemaValidator->check( $response->getContent() , $schema );
 
         $this->assertTrue( $this->JSONSchemaValidator->isValid() );
-        $response->assertStatus(200);
+        $response->assertStatus(201);
     }
 
     /**
