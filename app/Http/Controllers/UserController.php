@@ -7,7 +7,6 @@ use Illuminate\Validation\ValidationException;
 use DB;
 use Webpatser\Uuid\Uuid;
 use App\User;
-use App\UserType;
 
 class UserController extends Controller
 {
